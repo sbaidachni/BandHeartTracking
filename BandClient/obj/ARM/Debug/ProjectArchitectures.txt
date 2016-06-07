@@ -1,0 +1,1 @@
+C:\Users\sbaid\Documents\Visual Studio 2015\Projects\BandClient\BandClient\BandClient.csproj;arm
