@@ -199,3 +199,4 @@ C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\BandBackgroundTask.winmd
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\BandBackgroundTask.pdb
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\BandBackgroundTask.pri
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\Core\ForBundle\AppxManifest.xml

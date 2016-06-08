@@ -9,6 +9,8 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
+using Windows.ApplicationModel.Background;
+using Windows.Devices.Bluetooth.Rfcomm;
 using Windows.Devices.Enumeration;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -40,9 +42,37 @@ namespace BandClient
         bool isMaxNotified=false;
         bool isMinNotified = false;
 
+        private BackgroundTaskRegistration _deviceUseBackgroundTaskRegistration;
+        private DeviceUseTrigger _deviceUseTrigger;
+        BackgroundAccessStatus accessStatus;
+        DeviceInformation device;
+
         public MainPage()
         {
             this.InitializeComponent();
+            _deviceUseTrigger = new DeviceUseTrigger();
+            Application.Current.Suspending += Current_Suspending;
+            Application.Current.Resuming += Current_Resuming; 
+        }
+
+        private async void Current_Resuming(object sender, object e)
+        {
+            await InitBand();
+        }
+
+        private void Current_Suspending(object sender, Windows.ApplicationModel.SuspendingEventArgs e)
+        {
+            if (bandClient != null)
+            {
+                var deferral=e.SuspendingOperation.GetDeferral();
+                bandClient.SensorManager.HeartRate.ReadingChanged -= HeartRate_ReadingChanged;
+                bandClient.Dispose();
+                if (isStarted)
+                {
+                    SaveValuesForBackground();
+                }
+                deferral.Complete();
+            }
         }
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)
@@ -61,8 +91,7 @@ namespace BandClient
 
             try
             {
-                if (bandClient==null)
-                    bandClient = await BandClientManager.Instance.ConnectAsync(pairedBands[0]);
+                bandClient = await BandClientManager.Instance.ConnectAsync(pairedBands[0]);
                 if (bandClient.SensorManager.HeartRate.GetCurrentUserConsent() != UserConsent.Granted)
                 {
                     var result = await bandClient.SensorManager.HeartRate.RequestUserConsentAsync();
@@ -73,9 +102,20 @@ namespace BandClient
                 }
                 else
                 {
+                    device = (await DeviceInformation.FindAllAsync(RfcommDeviceService.GetDeviceSelector(RfcommServiceId.FromUuid(new Guid("A502CA9A-2BA5-413C-A4E0-13804E47B38F"))))).FirstOrDefault();
                     bandClient.SensorManager.HeartRate.ReadingChanged += HeartRate_ReadingChanged;
                     bool res = await bandClient.SensorManager.HeartRate.StartReadingsAsync();
-                    VisualStateManager.GoToState(this, "Normal", false);
+
+                    LoadValuesFromBackground();
+                    if (isStarted)
+                    {
+                        VisualStateManager.GoToState(this, "NormalStarted", false);
+                    }
+                    else
+                    {
+                        VisualStateManager.GoToState(this, "Normal", false);
+                    }
+                    
 
                     myTileId = new Guid("5E67A3C2-39D1-4F9B-BBFF-0D81CCE6D317");
                     BandTile myTile = new BandTile(myTileId)
@@ -86,7 +126,6 @@ namespace BandClient
                     };
 
                     IEnumerable<BandTile> tiles = await bandClient.TileManager.GetTilesAsync();
-                    //await bandClient.TileManager.RemoveTileAsync(myTileId);
 
                     if ((await bandClient.TileManager.GetRemainingTileCapacityAsync() > 0)&&(tiles.Count()==0))
                     {
@@ -111,20 +150,6 @@ namespace BandClient
                 await bitmap.SetSourceAsync(fileStream);
                 return bitmap.ToBandIcon();
             }
-        }
-
-        protected async override void OnNavigatedFrom(NavigationEventArgs e)
-        {
-            if (bandClient != null)
-            {
-                await bandClient.SensorManager.HeartRate.StopReadingsAsync();
-                bandClient.Dispose();
-                if (isStarted)
-                {
-                    SaveValuesForBackground();
-                }
-            }
-            base.OnNavigatedFrom(e);
         }
 
         private void SaveValuesForBackground()
@@ -213,6 +238,33 @@ namespace BandClient
             VisualStateManager.GoToState(this, "Normal", false);
             await bandClient.NotificationManager.SendMessageAsync(myTileId, "Workload Demo", "Your workloaded is stopped", DateTimeOffset.Now, MessageFlags.ShowDialog);
             isStarted = false;
+        }
+
+        private void KillBackground()
+        {
+            foreach (var backgroundTask in BackgroundTaskRegistration.AllTasks.Values)
+            {
+                ((BackgroundTaskRegistration)backgroundTask).Unregister(true);
+            }
+        }
+
+        private async void ActivateBackground()
+        {
+            accessStatus = await BackgroundExecutionManager.RequestAccessAsync();
+
+            if ((BackgroundAccessStatus.AllowedWithAlwaysOnRealTimeConnectivity == accessStatus) ||
+                (BackgroundAccessStatus.AllowedMayUseActiveRealTimeConnectivity == accessStatus))
+            {
+                var backgroundTaskBuilder = new BackgroundTaskBuilder()
+                {
+                    Name = "BandTaskInBackground", 
+                    TaskEntryPoint = "BandBackgroundTask.BandTaskInBackground"
+                };
+                backgroundTaskBuilder.SetTrigger(_deviceUseTrigger);
+                _deviceUseBackgroundTaskRegistration = backgroundTaskBuilder.Register();
+
+                var triggerResult = await _deviceUseTrigger.RequestAsync(device.Id);
+            }
         }
     }
 }

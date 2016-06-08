@@ -10,25 +10,25 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>c325ccb3-544d-48a5-8994-8098e21b90ac</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>75F5A98370757E2540897D927465352C6AF270F8237BDB319A8D1AA0FB802048</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>c325ccb3-544d-48a5-8994-8098e21b90ac_1.0.0.0_x64__sjy8nesdckxc0</RegisteredPackageMoniker>
+    <RegisteredManifestChecksum>F38E8011C90A88B7EC303ACCD1B4E0E9923E9BC16FF754486AF7BCE4E3BCF92A</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>c325ccb3-544d-48a5-8994-8098e21b90ac_1.0.3.0_x64__sjy8nesdckxc0</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>c325ccb3-544d-48a5-8994-8098e21b90ac_sjy8nesdckxc0!App</RegisteredUserModeAppID>
     <RegisteredPackageID>c325ccb3-544d-48a5-8994-8098e21b90ac</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=sbaid</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <RegisteredVersion>1.0.3.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-06-08T04:03:26.156</Modified>
+      <Modified>2016-06-08T18:05:01.496</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\BandClient.exe">
       <PackagePath>entrypoint\BandClient.exe</PackagePath>
-      <Modified>2016-06-08T04:03:25.410</Modified>
+      <Modified>2016-06-08T18:04:58.153</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sbaid\.nuget\packages\Microsoft.Band\1.3.20420\lib\uap10.0\Google.Protobuf.dll">
       <PackagePath>Google.Protobuf.dll</PackagePath>
@@ -460,7 +460,32 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandBackgroundTask\bin\x64\Debug\BandBackgroundTask.winmd">
       <PackagePath>BandBackgroundTask.winmd</PackagePath>
-      <Modified>2016-06-08T04:01:38.989</Modified>
+      <Modified>2016-06-08T17:46:18.510</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\NewStoreLogo.scale-100.png">
+      <PackagePath>Assets\NewStoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.501</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\NewStoreLogo.scale-125.png">
+      <PackagePath>Assets\NewStoreLogo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.504</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\NewStoreLogo.scale-150.png">
+      <PackagePath>Assets\NewStoreLogo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.507</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\NewStoreLogo.scale-200.png">
+      <PackagePath>Assets\NewStoreLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.510</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\NewStoreLogo.scale-400.png">
+      <PackagePath>Assets\NewStoreLogo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.514</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\SampleTileIconLarge.png">
       <PackagePath>Assets\SampleTileIconLarge.png</PackagePath>
@@ -470,6 +495,181 @@
       <PackagePath>Assets\SampleTileIconSmall.png</PackagePath>
       <Modified>2016-06-06T04:33:40.047</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:04:15.720</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\SplashScreen.scale-125.png">
+      <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:04:15.717</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:04:15.704</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\SplashScreen.scale-400.png">
+      <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:04:15.737</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.365</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square150x150Logo.scale-125.png">
+      <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.368</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square150x150Logo.scale-150.png">
+      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.371</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square150x150Logo.scale-400.png">
+      <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.383</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square310x310Logo.scale-100.png">
+      <PackagePath>Assets\Square310x310Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.414</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square310x310Logo.scale-125.png">
+      <PackagePath>Assets\Square310x310Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.419</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square310x310Logo.scale-150.png">
+      <PackagePath>Assets\Square310x310Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.425</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square310x310Logo.scale-200.png">
+      <PackagePath>Assets\Square310x310Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.433</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square310x310Logo.scale-400.png">
+      <PackagePath>Assets\Square310x310Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.460</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square44x44Logo.scale-100.png">
+      <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.462</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square44x44Logo.scale-125.png">
+      <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.465</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square44x44Logo.scale-150.png">
+      <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.467</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square44x44Logo.scale-400.png">
+      <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.473</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square44x44Logo.targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.474</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square44x44Logo.targetsize-16_altform-unplated.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-16_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.487</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square44x44Logo.targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.476</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square44x44Logo.targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.485</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square44x44Logo.targetsize-256_altform-unplated.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-256_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.499</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square44x44Logo.targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.478</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square44x44Logo.targetsize-32_altform-unplated.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-32_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.491</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square44x44Logo.targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.480</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square44x44Logo.targetsize-48_altform-unplated.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-48_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.493</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square71x71Logo.scale-100.png">
+      <PackagePath>Assets\Square71x71Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.359</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square71x71Logo.scale-125.png">
+      <PackagePath>Assets\Square71x71Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.358</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square71x71Logo.scale-150.png">
+      <PackagePath>Assets\Square71x71Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.358</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square71x71Logo.scale-200.png">
+      <PackagePath>Assets\Square71x71Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.358</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square71x71Logo.scale-400.png">
+      <PackagePath>Assets\Square71x71Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.363</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.386</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.389</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.392</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-06-08T18:03:54.410</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2015-07-21T02:06:24.000</Modified>
@@ -477,32 +677,31 @@
     <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-07-21T02:06:24.000</Modified>
+      <Modified>2016-06-08T18:04:15.701</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-07-21T02:06:24.000</Modified>
+      <Modified>2016-06-08T18:03:54.375</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-07-21T02:06:24.000</Modified>
+      <Modified>2016-06-08T18:03:54.469</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-07-21T02:06:24.000</Modified>
+      <Modified>2016-06-08T18:03:54.489</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-21T02:06:24.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-07-21T02:06:24.000</Modified>
+      <Modified>2016-06-08T18:03:54.397</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -518,11 +717,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-06-08T03:34:24.539</Modified>
+      <Modified>2016-06-08T18:04:59.349</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\Core\BandClient.exe">
       <PackagePath>BandClient.exe</PackagePath>
-      <Modified>2016-06-08T04:03:26.154</Modified>
+      <Modified>2016-06-08T18:05:01.489</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

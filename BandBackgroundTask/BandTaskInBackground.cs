@@ -25,9 +25,11 @@ namespace BandBackgroundTask
 
         public void Run(IBackgroundTaskInstance taskInstance)
         {
-            LoadValuesFromBackground();
-            InitBand().Wait();
             Deferral = taskInstance.GetDeferral();
+            LoadValuesFromBackground();
+            taskInstance.Canceled += OnCanceled;
+            InitBand().Wait();
+            
         }
 
         private void LoadValuesFromBackground()
@@ -42,7 +44,6 @@ namespace BandBackgroundTask
         private void SaveValuesForBackground()
         {
             ApplicationData.Current.LocalSettings.Values["isStarted"] = isStarted;
-            ApplicationData.Current.LocalSettings.Values["myTileId"] = myTileId;
             ApplicationData.Current.LocalSettings.Values["isMaxNotified"] = isMaxNotified;
             ApplicationData.Current.LocalSettings.Values["isMinNotified"] = isMinNotified;
             ApplicationData.Current.LocalSettings.Values["maxRate"] = maxRate;
