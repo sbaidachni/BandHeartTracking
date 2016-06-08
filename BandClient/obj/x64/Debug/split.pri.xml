@@ -28,6 +28,16 @@
 						<Value>Assets\LockScreenLogo.scale-200.png</Value>
 					</Candidate>
 				</NamedResource>
+				<NamedResource name="SampleTileIconLarge.png" uri="ms-resource://c325ccb3-544d-48a5-8994-8098e21b90ac/Files/Assets/SampleTileIconLarge.png">
+					<Candidate type="Path">
+						<Value>Assets\SampleTileIconLarge.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SampleTileIconSmall.png" uri="ms-resource://c325ccb3-544d-48a5-8994-8098e21b90ac/Files/Assets/SampleTileIconSmall.png">
+					<Candidate type="Path">
+						<Value>Assets\SampleTileIconSmall.png</Value>
+					</Candidate>
+				</NamedResource>
 				<NamedResource name="SplashScreen.png" uri="ms-resource://c325ccb3-544d-48a5-8994-8098e21b90ac/Files/Assets/SplashScreen.png">
 					<Candidate qualifiers="Scale-200" isDefault="true" type="Path">
 						<Value>Assets\SplashScreen.scale-200.png</Value>

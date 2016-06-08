@@ -196,3 +196,6 @@ C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\Microsoft.Band.Store_UAP.pri.xml
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\ProjectArchitectures.txt
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\BandClient.csprojResolveAssemblyReference.cache
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\BandBackgroundTask.winmd
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\BandBackgroundTask.pdb
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\BandBackgroundTask.pri

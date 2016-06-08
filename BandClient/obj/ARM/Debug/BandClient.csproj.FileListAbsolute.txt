@@ -195,3 +195,8 @@ C:\Users\sbaid\Documents\Visual Studio 2015\Projects\BandClient\BandClient\obj\A
 C:\Users\sbaid\Documents\Visual Studio 2015\Projects\BandClient\BandClient\obj\ARM\Debug\Microsoft.Band.Phone_UAP.pri.xml
 C:\Users\sbaid\Documents\Visual Studio 2015\Projects\BandClient\BandClient\obj\ARM\Debug\Microsoft.Band.Store_UAP.pri.xml
 C:\Users\sbaid\Documents\Visual Studio 2015\Projects\BandClient\BandClient\obj\ARM\Debug\ProjectArchitectures.txt
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\ARM\Debug\Core\ForBundle\AppxManifest.xml
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\ARM\Debug\BandBackgroundTask.winmd
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\ARM\Debug\BandBackgroundTask.pdb
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\ARM\Debug\BandBackgroundTask.pri
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\ARM\Debug\BandClient.csprojResolveAssemblyReference.cache

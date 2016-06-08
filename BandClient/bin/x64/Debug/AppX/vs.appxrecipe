@@ -9,8 +9,8 @@
     <SolutionConfiguration>Debug|x64</SolutionConfiguration>
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>c325ccb3-544d-48a5-8994-8098e21b90ac</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\sbaid\Documents\Visual Studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>62495E4211A1155681FE1031E1BC71C9FEBF426661E444E570DD6BE90D4A60DF</RegisteredManifestChecksum>
+    <IntermediateOutputPath>C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>75F5A98370757E2540897D927465352C6AF270F8237BDB319A8D1AA0FB802048</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>c325ccb3-544d-48a5-8994-8098e21b90ac_1.0.0.0_x64__sjy8nesdckxc0</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>c325ccb3-544d-48a5-8994-8098e21b90ac_sjy8nesdckxc0!App</RegisteredUserModeAppID>
     <RegisteredPackageID>c325ccb3-544d-48a5-8994-8098e21b90ac</RegisteredPackageID>
@@ -19,16 +19,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\sbaid\Documents\Visual Studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-06-07T00:11:18.645</Modified>
+      <Modified>2016-06-08T04:03:26.156</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\sbaid\Documents\Visual Studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\BandClient.exe">
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\BandClient.exe">
       <PackagePath>entrypoint\BandClient.exe</PackagePath>
-      <Modified>2016-06-07T00:11:17.784</Modified>
+      <Modified>2016-06-08T04:03:25.410</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sbaid\.nuget\packages\Microsoft.Band\1.3.20420\lib\uap10.0\Google.Protobuf.dll">
       <PackagePath>Google.Protobuf.dll</PackagePath>
@@ -458,45 +458,57 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2015-07-23T06:11:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sbaid\Documents\Visual Studio 2015\Projects\BandClient\BandClient\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2016-06-06T02:06:04.031</Modified>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandBackgroundTask\bin\x64\Debug\BandBackgroundTask.winmd">
+      <PackagePath>BandBackgroundTask.winmd</PackagePath>
+      <Modified>2016-06-08T04:01:38.989</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sbaid\Documents\Visual Studio 2015\Projects\BandClient\BandClient\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\SampleTileIconLarge.png">
+      <PackagePath>Assets\SampleTileIconLarge.png</PackagePath>
+      <Modified>2016-06-06T04:33:40.038</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\SampleTileIconSmall.png">
+      <PackagePath>Assets\SampleTileIconSmall.png</PackagePath>
+      <Modified>2016-06-06T04:33:40.047</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2015-07-21T02:06:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sbaid\Documents\Visual Studio 2015\Projects\BandClient\BandClient\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-21T02:06:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sbaid\Documents\Visual Studio 2015\Projects\BandClient\BandClient\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-21T02:06:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sbaid\Documents\Visual Studio 2015\Projects\BandClient\BandClient\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-21T02:06:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sbaid\Documents\Visual Studio 2015\Projects\BandClient\BandClient\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-21T02:06:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sbaid\Documents\Visual Studio 2015\Projects\BandClient\BandClient\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-21T02:06:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sbaid\Documents\Visual Studio 2015\Projects\BandClient\BandClient\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-21T02:06:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sbaid\Documents\Visual Studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\BandClient.xr.xml">
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2016-06-06T02:06:04.031</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\BandClient.xr.xml">
       <PackagePath>BandClient.xr.xml</PackagePath>
       <Modified>2016-06-07T00:04:42.732</Modified>
     </AppxPackagedFile>
@@ -504,13 +516,13 @@
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2016-05-12T00:47:19.124</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sbaid\Documents\Visual Studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-06-07T00:11:18.342</Modified>
+      <Modified>2016-06-08T03:34:24.539</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\sbaid\Documents\Visual Studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\Core\BandClient.exe">
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\Core\BandClient.exe">
       <PackagePath>BandClient.exe</PackagePath>
-      <Modified>2016-06-07T00:11:18.642</Modified>
+      <Modified>2016-06-08T04:03:26.154</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

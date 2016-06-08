@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="c325ccb3-544d-48a5-8994-8098e21b90ac" Publisher="CN=sbaid" Version="1.0.0.0" />
+  <Identity Name="c325ccb3-544d-48a5-8994-8098e21b90ac" Publisher="CN=sbaid" Version="1.0.3.0" />
   <mp:PhoneIdentity PhoneProductId="c325ccb3-544d-48a5-8994-8098e21b90ac" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>BandClient</DisplayName>
@@ -20,12 +20,18 @@
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
+      <Extensions>
+        <Extension Category="windows.backgroundTasks" EntryPoint="BandBackgroundTask.BandTaskInBackground">
+          <BackgroundTasks>
+            <Task Type="deviceUse" />
+          </BackgroundTasks>
+        </Extension>
+      </Extensions>
     </Application>
   </Applications>
   <Capabilities>
     <Capability Name="internetClient" />
     <DeviceCapability Name="proximity" />
     <DeviceCapability Name="bluetooth" />
-
   </Capabilities>
 </Package>

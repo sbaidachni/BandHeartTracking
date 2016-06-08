@@ -6,7 +6,7 @@
     <autoResourcePackage qualifier="DXFeatureLevel" />
     <omitSchemaFromResourcePacks />
   </packaging>
-  <index root="\" startIndexAt="C:\Users\sbaid\Documents\Visual Studio 2015\Projects\BandClient\BandClient\bin\ARM\Debug\resources.pri">
+  <index root="\" startIndexAt="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\ARM\Debug\resources.pri">
     <default>
       <qualifier name="Language" value="en-US" />
       <qualifier name="Contrast" value="standard" />

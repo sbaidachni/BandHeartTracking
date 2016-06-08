@@ -196,3 +196,7 @@ c:\users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x
 c:\users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x86\Debug\Microsoft.Band.dll
 c:\users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x86\Debug\Microsoft.Band.Phone_UAP.pri.xml
 c:\users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x86\Debug\Microsoft.Band.Store_UAP.pri.xml
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x86\Debug\Core\ForBundle\AppxManifest.xml
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x86\Debug\BandBackgroundTask.winmd
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x86\Debug\BandBackgroundTask.pdb
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x86\Debug\BandBackgroundTask.pri
