@@ -7,11 +7,11 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="c325ccb3-544d-48a5-8994-8098e21b90ac" Publisher="CN=sbaid" Version="1.0.4.0" ProcessorArchitecture="arm" />
+  <Identity Name="35581SBStudio.WorkloadDemo" Publisher="CN=5E452BF3-24C3-41DD-A595-44622280C3F7" Version="1.1.9.0" ProcessorArchitecture="arm" />
   <mp:PhoneIdentity PhoneProductId="c325ccb3-544d-48a5-8994-8098e21b90ac" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>BandClient</DisplayName>
-    <PublisherDisplayName>sbaid</PublisherDisplayName>
+    <DisplayName>Workload Demo</DisplayName>
+    <PublisherDisplayName>SB Studio</PublisherDisplayName>
     <Logo>Assets\NewStoreLogo.png</Logo>
   </Properties>
   <Dependencies>
@@ -22,7 +22,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="BandClient.exe" EntryPoint="BandClient.App">
-      <uap:VisualElements DisplayName="BandClient" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="BandClient" BackgroundColor="transparent">
+      <uap:VisualElements DisplayName="Workload Demo" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="BandClient" BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\Square310x310Logo.png" Square71x71Logo="Assets\Square71x71Logo.png"></uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>

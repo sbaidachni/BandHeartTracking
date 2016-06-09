@@ -3,41 +3,38 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:BandClient"
-    xmlns:code="using:BandClient.Code"
+    xmlns:code="using:CommonData"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <Page.Resources>
-        <code:HeartData x:ConnectionId='1' x:Name="heartData"></code:HeartData>
-    </Page.Resources>
     <Page.BottomAppBar>
         <CommandBar IsOpen="True" ClosedDisplayMode="Compact">
-            <AppBarButton x:ConnectionId='2' Icon="Play" Label="Start Workload" Name="startButton"                          ></AppBarButton>
-            <AppBarButton x:ConnectionId='3' Icon="Stop" Label="Stop Workload" Name="stopButton"                          Visibility="Collapsed"></AppBarButton>
+            <AppBarButton x:ConnectionId='1' Icon="Play" Label="Start Workload" Name="startButton"                          ></AppBarButton>
+            <AppBarButton x:ConnectionId='2' Icon="Stop" Label="Stop Workload" Name="stopButton"                          Visibility="Collapsed"></AppBarButton>
         </CommandBar>
     </Page.BottomAppBar>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" DataContext="{StaticResource heartData}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <Grid x:ConnectionId='4' Name="loadingGrid" VerticalAlignment="Center" Visibility="Collapsed">
+        <Grid x:ConnectionId='3' Name="loadingGrid" VerticalAlignment="Center" Visibility="Collapsed">
             <StackPanel>
                 <ProgressRing Width="100" Height="100" IsActive="True"></ProgressRing>
                 <TextBlock Text="Searching a band" HorizontalAlignment="Center" Style="{StaticResource SubtitleTextBlockStyle}"></TextBlock>
             </StackPanel>
         </Grid>
-        <Grid x:ConnectionId='5' Name="nobandGrid" VerticalAlignment="Center" Visibility="Collapsed">
+        <Grid x:ConnectionId='4' Name="nobandGrid" VerticalAlignment="Center" Visibility="Collapsed">
             <StackPanel>
                 <TextBlock Text="No Band is found. Please, make sure that your band is paired." TextWrapping="Wrap" TextAlignment="Center"  Style="{StaticResource SubtitleTextBlockStyle}" HorizontalAlignment="Center"></TextBlock>
-                <AppBarButton x:ConnectionId='13' Icon="Refresh"                       HorizontalAlignment="Center" Label="Try Again"></AppBarButton>
-            </StackPanel>
-        </Grid>
-        <Grid x:ConnectionId='6' Name="permissionGrid" VerticalAlignment="Center" Visibility="Collapsed">
-            <StackPanel>
-                <TextBlock Text="You didn't provide permissions for the band" TextWrapping="Wrap" TextAlignment="Center"  Style="{StaticResource SubtitleTextBlockStyle}" HorizontalAlignment="Center"></TextBlock>
                 <AppBarButton x:ConnectionId='12' Icon="Refresh"                       HorizontalAlignment="Center" Label="Try Again"></AppBarButton>
             </StackPanel>
         </Grid>
-        <Grid x:ConnectionId='7' Name="normalGrid" VerticalAlignment="Center">
+        <Grid x:ConnectionId='5' Name="permissionGrid" VerticalAlignment="Center" Visibility="Collapsed">
+            <StackPanel>
+                <TextBlock Text="You didn't provide permissions for the band" TextWrapping="Wrap" TextAlignment="Center"  Style="{StaticResource SubtitleTextBlockStyle}" HorizontalAlignment="Center"></TextBlock>
+                <AppBarButton x:ConnectionId='11' Icon="Refresh"                       HorizontalAlignment="Center" Label="Try Again"></AppBarButton>
+            </StackPanel>
+        </Grid>
+        <Grid x:ConnectionId='6' Name="normalGrid" VerticalAlignment="Center">
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -50,7 +47,7 @@
                 <TextBlock Text="Heart Rate:" Style="{StaticResource TitleTextBlockStyle}" HorizontalAlignment="Center"></TextBlock>
                 <TextBlock Grid.Row="1" Text="{Binding CurrentRate}" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Center"></TextBlock>
             </Grid>
-            <Grid x:ConnectionId='11' Grid.Row="1" Name="normalGridRunning" HorizontalAlignment="Center" Visibility="Collapsed">
+            <Grid x:ConnectionId='10' Grid.Row="1" Name="normalGridRunning" HorizontalAlignment="Center" Visibility="Collapsed">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
@@ -65,7 +62,7 @@
                 <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding MaxRate}" Style="{StaticResource HeaderTextBlockStyle}" HorizontalAlignment="Center"></TextBlock>
             </Grid>
         </Grid>
-        <ContentDialog x:ConnectionId='8' x:Name="termsOfUseContentDialog"
+        <ContentDialog x:ConnectionId='7' x:Name="termsOfUseContentDialog"
            PrimaryButtonText="Start" 
            SecondaryButtonText="Cancel" >
             <ContentDialog.TitleTemplate>
@@ -77,7 +74,7 @@
             </ContentDialog.TitleTemplate>
             <StackPanel Margin="0,10,0,10">
                 <TextBlock Text="Minimum rate:" HorizontalAlignment="Center"></TextBlock>
-                <ComboBox x:ConnectionId='9' HorizontalAlignment="Center" ItemsSource="{Binding Rates}" SelectedIndex="{Binding CurrentRateIndex}" Name="minBox">
+                <ComboBox x:ConnectionId='8' HorizontalAlignment="Center" ItemsSource="{Binding Rates}" SelectedIndex="{Binding CurrentRateIndex}" Name="minBox">
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="{Binding}"></TextBlock>
@@ -85,7 +82,7 @@
                     </ComboBox.ItemTemplate>
                 </ComboBox>
                 <TextBlock Text="Maximum rate:" HorizontalAlignment="Center"></TextBlock>
-                <ComboBox x:ConnectionId='10' HorizontalAlignment="Center" ItemsSource="{Binding Rates}"  SelectedIndex="{Binding CurrentRateIndex}" Name="maxBox">
+                <ComboBox x:ConnectionId='9' HorizontalAlignment="Center" ItemsSource="{Binding Rates}"  SelectedIndex="{Binding CurrentRateIndex}" Name="maxBox">
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Style="{StaticResource TitleTextBlockStyle}" Text="{Binding}"></TextBlock>
@@ -96,19 +93,19 @@
         </ContentDialog>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
-                <VisualState x:ConnectionId='14' x:Name="Normal">
+                <VisualState x:ConnectionId='13' x:Name="Normal">
                     <VisualState.Setters>
                         
                     </VisualState.Setters>
                 </VisualState>
-                <VisualState x:ConnectionId='15' x:Name="NormalStarted">
+                <VisualState x:ConnectionId='14' x:Name="NormalStarted">
                     <VisualState.Setters>
                         <Setter Target="stopButton.Visibility" Value="Visible"></Setter>
                         <Setter Target="startButton.Visibility" Value="Collapsed"></Setter>
                         <Setter Target="normalGridRunning.Visibility" Value="Visible"></Setter>
                     </VisualState.Setters>
                 </VisualState>
-                <VisualState x:ConnectionId='16' x:Name="Loading">
+                <VisualState x:ConnectionId='15' x:Name="Loading">
                     <VisualState.Setters>
                         <Setter Target="loadingGrid.Visibility" Value="Visible"></Setter>
                         <Setter Target="nobandGrid.Visibility" Value="Collapsed"></Setter>
@@ -118,7 +115,7 @@
                         <Setter Target="startButton.Visibility" Value="Collapsed"></Setter>
                     </VisualState.Setters>
                 </VisualState>
-                <VisualState x:ConnectionId='17' x:Name="NoBand">
+                <VisualState x:ConnectionId='16' x:Name="NoBand">
                     <VisualState.Setters>
                         <Setter Target="loadingGrid.Visibility" Value="Collapsed"></Setter>
                         <Setter Target="nobandGrid.Visibility" Value="Visible"></Setter>
@@ -128,7 +125,7 @@
                         <Setter Target="startButton.Visibility" Value="Collapsed"></Setter>
                     </VisualState.Setters>
                 </VisualState>
-                <VisualState x:ConnectionId='18' x:Name="NoPermissions">
+                <VisualState x:ConnectionId='17' x:Name="NoPermissions">
                     <VisualState.Setters>
                         <Setter Target="loadingGrid.Visibility" Value="Collapsed"></Setter>
                         <Setter Target="nobandGrid.Visibility" Value="Collapsed"></Setter>

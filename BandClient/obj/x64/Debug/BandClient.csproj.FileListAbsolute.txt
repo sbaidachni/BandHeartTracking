@@ -7,6 +7,7 @@ C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\AppxManifest.xml
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\Core\AppxManifest.xml
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\Core\BandClient.exe
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\Core\ForBundle\AppxManifest.xml
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\BandClient.build.appxrecipe
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\Google.Protobuf.dll
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\Microsoft.Band.Phone_UAP.dll
@@ -115,6 +116,13 @@ C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\System.Xml.XDocument.dll
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\System.Xml.XmlDocument.dll
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\System.Xml.XmlSerializer.dll
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\BandBackgroundTask.winmd
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\CommonData.dll
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\BandBackgroundTask.pdb
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\BandBackgroundTask.pri
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\CommonData.pdb
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\CommonData.pri
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\BandClient.csprojResolveAssemblyReference.cache
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\App.g.i.cs
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\App.g.cs
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\MainPage.g.i.cs
@@ -181,6 +189,7 @@ C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\FxResources.System.Xml.XDocument.SR.resw
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\FxResources.System.Xml.XmlDocument.SR.resw
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\FxResources.System.Xml.XmlSerializer.SR.resw
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\BandClient.csproj.GenerateResource.Cache
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\priconfig.xml
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\priconfig.xml.intermediate
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\layout.resfiles
@@ -195,8 +204,3 @@ C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\Microsoft.Band.Phone_UAP.pri.xml
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\Microsoft.Band.Store_UAP.pri.xml
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\ProjectArchitectures.txt
-C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\BandClient.csprojResolveAssemblyReference.cache
-C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\BandBackgroundTask.winmd
-C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\BandBackgroundTask.pdb
-C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\BandBackgroundTask.pri
-C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\x64\Debug\Core\ForBundle\AppxManifest.xml

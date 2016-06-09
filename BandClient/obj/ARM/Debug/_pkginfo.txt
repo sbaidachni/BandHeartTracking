@@ -1,1 +1,1 @@
-C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\AppPackages\BandClient_1.0.4.0_Debug_Test\BandClient_1.0.4.0_x86_x64_arm_Debug.appxbundle
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\AppPackages\BandClient_1.1.9.0_Debug_Test\BandClient_1.1.9.0_x86_x64_arm_Debug.appxbundle

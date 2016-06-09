@@ -1,6 +1,10 @@
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandBackgroundTask\bin\x86\Debug\BandBackgroundTask.winmd
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandBackgroundTask\bin\x86\Debug\BandBackgroundTask.pdb
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandBackgroundTask\bin\x86\Debug\BandBackgroundTask.pri
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandBackgroundTask\bin\x86\Debug\CommonData.dll
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandBackgroundTask\bin\x86\Debug\CommonData.pdb
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandBackgroundTask\bin\x86\Debug\CommonData.pri
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandBackgroundTask\obj\x86\Debug\BandBackgroundTask.csprojResolveAssemblyReference.cache
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandBackgroundTask\obj\x86\Debug\BandBackgroundTask.winmd
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandBackgroundTask\obj\x86\Debug\BandBackgroundTask.pdb
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandBackgroundTask\obj\x86\Debug\BandBackgroundTask.winmdobj

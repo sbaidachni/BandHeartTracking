@@ -132,25 +132,15 @@ namespace BandClient.BandClient_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[8];
-            _typeNameTable[0] = "BandClient.Code.HeartData";
-            _typeNameTable[1] = "Object";
-            _typeNameTable[2] = "System.Collections.ObjectModel.ObservableCollection`1<Int32>";
-            _typeNameTable[3] = "System.Collections.ObjectModel.Collection`1<Int32>";
-            _typeNameTable[4] = "Int32";
-            _typeNameTable[5] = "BandClient.MainPage";
-            _typeNameTable[6] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[7] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable = new string[3];
+            _typeNameTable[0] = "BandClient.MainPage";
+            _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
 
-            _typeTable = new global::System.Type[8];
-            _typeTable[0] = typeof(global::BandClient.Code.HeartData);
-            _typeTable[1] = typeof(global::System.Object);
-            _typeTable[2] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::System.Int32>);
-            _typeTable[3] = typeof(global::System.Collections.ObjectModel.Collection<global::System.Int32>);
-            _typeTable[4] = typeof(global::System.Int32);
-            _typeTable[5] = typeof(global::BandClient.MainPage);
-            _typeTable[6] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[7] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable = new global::System.Type[3];
+            _typeTable[0] = typeof(global::BandClient.MainPage);
+            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -185,22 +175,7 @@ namespace BandClient.BandClient_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_HeartData() { return new global::BandClient.Code.HeartData(); }
-        private object Activate_2_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::System.Int32>(); }
-        private object Activate_3_Collection() { return new global::System.Collections.ObjectModel.Collection<global::System.Int32>(); }
-        private object Activate_5_MainPage() { return new global::BandClient.MainPage(); }
-        private void VectorAdd_2_ObservableCollection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::System.Int32>)instance;
-            var newItem = (global::System.Int32)item;
-            collection.Add(newItem);
-        }
-        private void VectorAdd_3_Collection(object instance, object item)
-        {
-            var collection = (global::System.Collections.Generic.ICollection<global::System.Int32>)instance;
-            var newItem = (global::System.Int32)item;
-            collection.Add(newItem);
-        }
+        private object Activate_0_MainPage() { return new global::BandClient.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -212,52 +187,18 @@ namespace BandClient.BandClient_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  BandClient.Code.HeartData
-                userType = new global::BandClient.BandClient_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_0_HeartData;
-                userType.AddMemberName("Rates");
-                userType.AddMemberName("CurrentRateIndex");
-                userType.AddMemberName("CurrentRate");
-                userType.AddMemberName("MinRate");
-                userType.AddMemberName("MaxRate");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 1:   //  Object
-                xamlType = new global::BandClient.BandClient_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 2:   //  System.Collections.ObjectModel.ObservableCollection`1<Int32>
-                userType = new global::BandClient.BandClient_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<Int32>"));
-                userType.CollectionAdd = VectorAdd_2_ObservableCollection;
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 3:   //  System.Collections.ObjectModel.Collection`1<Int32>
-                userType = new global::BandClient.BandClient_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_3_Collection;
-                userType.CollectionAdd = VectorAdd_3_Collection;
-                xamlType = userType;
-                break;
-
-            case 4:   //  Int32
-                xamlType = new global::BandClient.BandClient_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 5:   //  BandClient.MainPage
+            case 0:   //  BandClient.MainPage
                 userType = new global::BandClient.BandClient_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_MainPage;
+                userType.Activator = Activate_0_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  Windows.UI.Xaml.Controls.Page
+            case 1:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::BandClient.BandClient_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 7:   //  Windows.UI.Xaml.Controls.UserControl
+            case 2:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::BandClient.BandClient_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -265,95 +206,11 @@ namespace BandClient.BandClient_XamlTypeInfo
         }
 
 
-        private object get_0_HeartData_Rates(object instance)
-        {
-            var that = (global::BandClient.Code.HeartData)instance;
-            return that.Rates;
-        }
-        private void set_0_HeartData_Rates(object instance, object Value)
-        {
-            var that = (global::BandClient.Code.HeartData)instance;
-            that.Rates = (global::System.Collections.ObjectModel.ObservableCollection<global::System.Int32>)Value;
-        }
-        private object get_1_HeartData_CurrentRateIndex(object instance)
-        {
-            var that = (global::BandClient.Code.HeartData)instance;
-            return that.CurrentRateIndex;
-        }
-        private void set_1_HeartData_CurrentRateIndex(object instance, object Value)
-        {
-            var that = (global::BandClient.Code.HeartData)instance;
-            that.CurrentRateIndex = (global::System.Int32)Value;
-        }
-        private object get_2_HeartData_CurrentRate(object instance)
-        {
-            var that = (global::BandClient.Code.HeartData)instance;
-            return that.CurrentRate;
-        }
-        private void set_2_HeartData_CurrentRate(object instance, object Value)
-        {
-            var that = (global::BandClient.Code.HeartData)instance;
-            that.CurrentRate = (global::System.Int32)Value;
-        }
-        private object get_3_HeartData_MinRate(object instance)
-        {
-            var that = (global::BandClient.Code.HeartData)instance;
-            return that.MinRate;
-        }
-        private void set_3_HeartData_MinRate(object instance, object Value)
-        {
-            var that = (global::BandClient.Code.HeartData)instance;
-            that.MinRate = (global::System.Int32)Value;
-        }
-        private object get_4_HeartData_MaxRate(object instance)
-        {
-            var that = (global::BandClient.Code.HeartData)instance;
-            return that.MaxRate;
-        }
-        private void set_4_HeartData_MaxRate(object instance, object Value)
-        {
-            var that = (global::BandClient.Code.HeartData)instance;
-            that.MaxRate = (global::System.Int32)Value;
-        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::BandClient.BandClient_XamlTypeInfo.XamlMember xamlMember = null;
-            global::BandClient.BandClient_XamlTypeInfo.XamlUserType userType;
-
-            switch (longMemberName)
-            {
-            case "BandClient.Code.HeartData.Rates":
-                userType = (global::BandClient.BandClient_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BandClient.Code.HeartData");
-                xamlMember = new global::BandClient.BandClient_XamlTypeInfo.XamlMember(this, "Rates", "System.Collections.ObjectModel.ObservableCollection`1<Int32>");
-                xamlMember.Getter = get_0_HeartData_Rates;
-                xamlMember.Setter = set_0_HeartData_Rates;
-                break;
-            case "BandClient.Code.HeartData.CurrentRateIndex":
-                userType = (global::BandClient.BandClient_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BandClient.Code.HeartData");
-                xamlMember = new global::BandClient.BandClient_XamlTypeInfo.XamlMember(this, "CurrentRateIndex", "Int32");
-                xamlMember.Getter = get_1_HeartData_CurrentRateIndex;
-                xamlMember.Setter = set_1_HeartData_CurrentRateIndex;
-                break;
-            case "BandClient.Code.HeartData.CurrentRate":
-                userType = (global::BandClient.BandClient_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BandClient.Code.HeartData");
-                xamlMember = new global::BandClient.BandClient_XamlTypeInfo.XamlMember(this, "CurrentRate", "Int32");
-                xamlMember.Getter = get_2_HeartData_CurrentRate;
-                xamlMember.Setter = set_2_HeartData_CurrentRate;
-                break;
-            case "BandClient.Code.HeartData.MinRate":
-                userType = (global::BandClient.BandClient_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BandClient.Code.HeartData");
-                xamlMember = new global::BandClient.BandClient_XamlTypeInfo.XamlMember(this, "MinRate", "Int32");
-                xamlMember.Getter = get_3_HeartData_MinRate;
-                xamlMember.Setter = set_3_HeartData_MinRate;
-                break;
-            case "BandClient.Code.HeartData.MaxRate":
-                userType = (global::BandClient.BandClient_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BandClient.Code.HeartData");
-                xamlMember = new global::BandClient.BandClient_XamlTypeInfo.XamlMember(this, "MaxRate", "Int32");
-                xamlMember.Getter = get_4_HeartData_MaxRate;
-                xamlMember.Setter = set_4_HeartData_MaxRate;
-                break;
-            }
+            // No Local Properties
             return xamlMember;
         }
     }

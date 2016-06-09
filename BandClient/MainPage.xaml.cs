@@ -1,4 +1,5 @@
-﻿using Microsoft.Band;
+﻿using CommonData;
+using Microsoft.Band;
 using Microsoft.Band.Notifications;
 using Microsoft.Band.Sensors;
 using Microsoft.Band.Tiles;
@@ -37,10 +38,7 @@ namespace BandClient
     public sealed partial class MainPage : Page
     {
         IBandClient bandClient;
-        bool isStarted = false;
-        Guid myTileId;
-        bool isMaxNotified=false;
-        bool isMinNotified = false;
+        HeartData heartData;
 
         private BackgroundTaskRegistration _deviceUseBackgroundTaskRegistration;
         private DeviceUseTrigger _deviceUseTrigger;
@@ -50,14 +48,13 @@ namespace BandClient
         public MainPage()
         {
             this.InitializeComponent();
-            _deviceUseTrigger = new DeviceUseTrigger();
             Application.Current.Suspending += Current_Suspending;
             Application.Current.Resuming += Current_Resuming; 
         }
 
         private async void Current_Resuming(object sender, object e)
         {
-            await InitBand();
+            await InitInterface();
         }
 
         private void Current_Suspending(object sender, Windows.ApplicationModel.SuspendingEventArgs e)
@@ -65,11 +62,10 @@ namespace BandClient
             if (bandClient != null)
             {
                 var deferral=e.SuspendingOperation.GetDeferral();
-                bandClient.SensorManager.HeartRate.ReadingChanged -= HeartRate_ReadingChanged;
-                bandClient.Dispose();
-                if (isStarted)
+                if (bandClient != null)
                 {
-                    SaveValuesForBackground();
+                    bandClient.SensorManager.HeartRate.ReadingChanged -= HeartRate_ReadingChanged;
+                    bandClient.Dispose();
                 }
                 deferral.Complete();
             }
@@ -77,20 +73,42 @@ namespace BandClient
 
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
+            await InitInterface();
+            base.OnNavigatedTo(e); 
+        }
+
+        private async Task InitInterface()
+        {
+            heartData = new HeartData();
+            this.DataContext = heartData;
+            device = (await DeviceInformation.FindAllAsync(RfcommDeviceService.GetDeviceSelector(RfcommServiceId.FromUuid(new Guid("A502CA9A-2BA5-413C-A4E0-13804E47B38F"))))).FirstOrDefault();
+
+            VisualStateManager.GoToState(this, "Loading", false);
+
+            if ((heartData.IsStarted) && (IsBackgroundRunning()))
+            {
+                VisualStateManager.GoToState(this, "NormalStarted", false);
+                _deviceUseBackgroundTaskRegistration.Progress += _deviceUseBackgroundTaskRegistration_Progress;
+                return;
+            }
+
+            KillBackground();
+
+            heartData.IsStarted = false;
+            heartData.IsMaxNotified = false;
+            heartData.IsMinNotified = false;
+
             await InitBand();
-            base.OnNavigatedTo(e);
-        } 
+        }
 
         private async Task InitBand()
         {
-            VisualStateManager.GoToState(this, "Loading", false);
-
-            IBandInfo[] pairedBands;
-
-            pairedBands = await BandClientManager.Instance.GetBandsAsync();
-
             try
             {
+                IBandInfo[] pairedBands;
+
+                pairedBands = await BandClientManager.Instance.GetBandsAsync();
+                
                 bandClient = await BandClientManager.Instance.ConnectAsync(pairedBands[0]);
                 if (bandClient.SensorManager.HeartRate.GetCurrentUserConsent() != UserConsent.Granted)
                 {
@@ -102,23 +120,12 @@ namespace BandClient
                 }
                 else
                 {
-                    device = (await DeviceInformation.FindAllAsync(RfcommDeviceService.GetDeviceSelector(RfcommServiceId.FromUuid(new Guid("A502CA9A-2BA5-413C-A4E0-13804E47B38F"))))).FirstOrDefault();
                     bandClient.SensorManager.HeartRate.ReadingChanged += HeartRate_ReadingChanged;
                     bool res = await bandClient.SensorManager.HeartRate.StartReadingsAsync();
-
-                    LoadValuesFromBackground();
-                    if (isStarted)
-                    {
-                        VisualStateManager.GoToState(this, "NormalStarted", false);
-                    }
-                    else
-                    {
-                        VisualStateManager.GoToState(this, "Normal", false);
-                    }
                     
-
-                    myTileId = new Guid("5E67A3C2-39D1-4F9B-BBFF-0D81CCE6D317");
-                    BandTile myTile = new BandTile(myTileId)
+                    VisualStateManager.GoToState(this, "Normal", false);
+                    
+                    BandTile myTile = new BandTile(heartData.MyTileId)
                     {
                         Name = "My Tile",
                         TileIcon = await LoadIcon("ms-appx:///Assets/SampleTileIconLarge.png"),
@@ -127,14 +134,13 @@ namespace BandClient
 
                     IEnumerable<BandTile> tiles = await bandClient.TileManager.GetTilesAsync();
 
-                    if ((await bandClient.TileManager.GetRemainingTileCapacityAsync() > 0)&&(tiles.Count()==0))
+                    if ((await bandClient.TileManager.GetRemainingTileCapacityAsync() > 0) && (tiles.Count() == 0))
                     {
                         await bandClient.TileManager.AddTileAsync(myTile);
                     }
                 }
-
             }
-            catch (BandException ex)
+            catch (Exception ex)
             {
                 VisualStateManager.GoToState(this, "NoBand", false);
             }
@@ -152,61 +158,21 @@ namespace BandClient
             }
         }
 
-        private void SaveValuesForBackground()
-        {
-            ApplicationData.Current.LocalSettings.Values["isStarted"] = isStarted;
-            ApplicationData.Current.LocalSettings.Values["myTileId"] = myTileId;
-            ApplicationData.Current.LocalSettings.Values["isMaxNotified"] = isMaxNotified;
-            ApplicationData.Current.LocalSettings.Values["isMinNotified"] = isMinNotified;
-            ApplicationData.Current.LocalSettings.Values["maxRate"] = heartData.MaxRate;
-            ApplicationData.Current.LocalSettings.Values["minRate"] = heartData.MinRate;
-        }
-
-        private void LoadValuesFromBackground()
-        {
-            if (ApplicationData.Current.LocalSettings.Values["isStarted"]!=null)
-            {
-                isStarted = (bool)ApplicationData.Current.LocalSettings.Values["isStarted"];
-                isMinNotified = (bool)ApplicationData.Current.LocalSettings.Values["isMinNotified"];
-                isMaxNotified = (bool)ApplicationData.Current.LocalSettings.Values["isMaxNotified"];
-                heartData.MaxRate = (int)ApplicationData.Current.LocalSettings.Values["maxRate"];
-                heartData.MinRate = (int)ApplicationData.Current.LocalSettings.Values["minRate"];
-            }
-        }
-
         private async void HeartRate_ReadingChanged(object sender, Microsoft.Band.Sensors.BandSensorReadingEventArgs<Microsoft.Band.Sensors.IBandHeartRateReading> e)
         {
             await this.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
-            async () =>
+            () =>
             {
                 if (e.SensorReading.Quality == HeartRateQuality.Locked)
                 {
                     heartData.CurrentRate = e.SensorReading.HeartRate;
-                    if (isStarted)
-                    {
-                        if ((heartData.CurrentRate>=heartData.MaxRate)&&(!isMaxNotified))
-                        {
-                            isMaxNotified = true;
-                            isMinNotified = false;
-                            await bandClient.NotificationManager.SendMessageAsync(myTileId, "Workload Demo", "You have to rest some time!", DateTimeOffset.Now, MessageFlags.ShowDialog);
-                            await bandClient.NotificationManager.VibrateAsync(VibrationType.ThreeToneHigh);
-
-                        }
-                        else if ((heartData.CurrentRate <= heartData.MinRate)&&(!isMinNotified)&&(isMaxNotified))
-                        {
-                            isMaxNotified = false;
-                            isMinNotified = true;
-                            await bandClient.NotificationManager.SendMessageAsync(myTileId, "Workload Demo", "You can continue", DateTimeOffset.Now, MessageFlags.ShowDialog);
-                            await bandClient.NotificationManager.VibrateAsync(VibrationType.TwoToneHigh);
-                        }
-                    }
                 }
              });
         }
 
         private async void Refresh_Click(object sender, RoutedEventArgs e)
         {
-            await InitBand();
+            await InitInterface();
         }
 
         private async void startButton_Click(object sender, RoutedEventArgs e)
@@ -224,32 +190,57 @@ namespace BandClient
                     VisualStateManager.GoToState(this, "NormalStarted", false);
                     heartData.MinRate = heartData.Rates[idx1];
                     heartData.MaxRate = heartData.Rates[idx2];
-                    isStarted = true;
-                    isMinNotified = false;
-                    isMaxNotified = false;
-                    await bandClient.NotificationManager.SendMessageAsync(myTileId, "Workload Demo", "The workload is started", DateTimeOffset.Now, MessageFlags.ShowDialog);
+                    heartData.IsStarted = true;
+                    heartData.IsMinNotified = false;
+                    heartData.IsMaxNotified = false;
+                    await bandClient.NotificationManager.SendMessageAsync(heartData.MyTileId, "Workload Demo", "The workload is started", DateTimeOffset.Now, MessageFlags.ShowDialog);
+                    ReleaseBand();
+                    await ActivateBackground();
                 }
-                
             }
+        }
+
+        private void ReleaseBand()
+        {
+            bandClient.SensorManager.HeartRate.ReadingChanged -= HeartRate_ReadingChanged;
+            bandClient.Dispose();
+            bandClient = null;
         }
 
         private async void stopButton_Click(object sender, RoutedEventArgs e)
         {
-            VisualStateManager.GoToState(this, "Normal", false);
-            await bandClient.NotificationManager.SendMessageAsync(myTileId, "Workload Demo", "Your workloaded is stopped", DateTimeOffset.Now, MessageFlags.ShowDialog);
-            isStarted = false;
+            KillBackground();
+            heartData.IsStarted = false;
+            await InitBand();
+            //await bandClient.NotificationManager.SendMessageAsync(heartData.MyTileId, "Workload Demo", "Your workloaded is stopped", DateTimeOffset.Now, MessageFlags.ShowDialog);
+
         }
 
         private void KillBackground()
         {
-            foreach (var backgroundTask in BackgroundTaskRegistration.AllTasks.Values)
-            {
-                ((BackgroundTaskRegistration)backgroundTask).Unregister(true);
-            }
+            var t = (from a in BackgroundTaskRegistration.AllTasks.Values
+                    where a.Name.Equals("BandTaskInBackground")
+                    select a).FirstOrDefault();
+            if (t != null)
+                t.Unregister(true);
         }
 
-        private async void ActivateBackground()
+        private bool IsBackgroundRunning()
         {
+            var res = (from a in BackgroundTaskRegistration.AllTasks.Values
+                      where a.Name.Equals("BandTaskInBackground")
+                      select a).FirstOrDefault();
+            if (res != null)
+            {
+                _deviceUseBackgroundTaskRegistration = res as BackgroundTaskRegistration;
+                return true;
+            }
+            return false;
+        }
+
+        private async Task ActivateBackground()
+        {
+            _deviceUseTrigger = new DeviceUseTrigger();
             accessStatus = await BackgroundExecutionManager.RequestAccessAsync();
 
             if ((BackgroundAccessStatus.AllowedWithAlwaysOnRealTimeConnectivity == accessStatus) ||
@@ -262,9 +253,18 @@ namespace BandClient
                 };
                 backgroundTaskBuilder.SetTrigger(_deviceUseTrigger);
                 _deviceUseBackgroundTaskRegistration = backgroundTaskBuilder.Register();
-
+                _deviceUseBackgroundTaskRegistration.Progress += _deviceUseBackgroundTaskRegistration_Progress;
                 var triggerResult = await _deviceUseTrigger.RequestAsync(device.Id);
             }
+        }
+
+        private async void _deviceUseBackgroundTaskRegistration_Progress(BackgroundTaskRegistration sender, BackgroundTaskProgressEventArgs args)
+        {
+            await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            {
+                heartData.CurrentRate = (int)args.Progress;
+            });
+            
         }
     }
 }

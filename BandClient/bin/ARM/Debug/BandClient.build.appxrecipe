@@ -342,6 +342,9 @@
     <AppxPackagedFile Include="C:\Users\sbaid\.nuget\packages\System.Xml.XmlSerializer\4.0.10\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\CommonData\bin\ARM\Debug\CommonData.dll">
+      <PackagePath>CommonData.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandBackgroundTask\bin\ARM\Debug\BandBackgroundTask.winmd">
       <PackagePath>BandBackgroundTask.winmd</PackagePath>
     </AppxPackagedFile>

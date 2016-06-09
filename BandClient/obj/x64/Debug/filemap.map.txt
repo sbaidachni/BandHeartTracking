@@ -110,6 +110,7 @@
 "C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\PackageLayout\Microsoft.Band.Phone_UAP.dll"			"Microsoft.Band.Phone_UAP.dll"
 "C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\PackageLayout\Microsoft.Band.dll"			"Microsoft.Band.dll"
 "C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\PackageLayout\Google.Protobuf.dll"			"Google.Protobuf.dll"
+"C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\PackageLayout\CommonData.dll"			"CommonData.dll"
 "C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\PackageLayout\ClrCompression.dll"			"ClrCompression.dll"
 "C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\PackageLayout\BandClient.xr.xml"			"BandClient.xr.xml"
 "C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\x64\Debug\PackageLayout\BandClient.exe"			"BandClient.exe"

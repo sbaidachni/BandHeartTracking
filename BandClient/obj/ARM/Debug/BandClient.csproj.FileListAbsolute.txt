@@ -200,3 +200,7 @@ C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\A
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\ARM\Debug\BandBackgroundTask.pdb
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\ARM\Debug\BandBackgroundTask.pri
 C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\ARM\Debug\BandClient.csprojResolveAssemblyReference.cache
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\ARM\Debug\CommonData.dll
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\ARM\Debug\CommonData.pdb
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\ARM\Debug\CommonData.pri
+C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\obj\ARM\Debug\BandClient.csproj.GenerateResource.Cache

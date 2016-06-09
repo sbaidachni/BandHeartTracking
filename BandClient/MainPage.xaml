@@ -3,13 +3,10 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:BandClient"
-    xmlns:code="using:BandClient.Code"
+    xmlns:code="using:CommonData"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <Page.Resources>
-        <code:HeartData x:Name="heartData"></code:HeartData>
-    </Page.Resources>
     <Page.BottomAppBar>
         <CommandBar IsOpen="True" ClosedDisplayMode="Compact">
             <AppBarButton Icon="Play" Label="Start Workload" Name="startButton" Click="startButton_Click"></AppBarButton>
@@ -17,7 +14,7 @@
         </CommandBar>
     </Page.BottomAppBar>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" DataContext="{StaticResource heartData}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <Grid Name="loadingGrid" VerticalAlignment="Center" Visibility="Collapsed">
             <StackPanel>

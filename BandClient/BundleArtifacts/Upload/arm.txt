@@ -1,0 +1,5 @@
+MainPackage=C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\bin\ARM\Release\Upload\BandClient_1.1.1.0_ARM.appx
+ResourcePack=C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\_scale-100.appx
+ResourcePack=C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\_scale-125.appx
+ResourcePack=C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\_scale-150.appx
+ResourcePack=C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\_scale-400.appx
