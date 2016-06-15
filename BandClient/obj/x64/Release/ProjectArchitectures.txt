@@ -1,2 +1,0 @@
-C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandBackgroundTask\BandBackgroundTask.csproj;x64
-C:\Users\sbaid\documents\visual studio 2015\Projects\BandClient\BandClient\BandClient.csproj;x64

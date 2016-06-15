@@ -258,6 +258,7 @@ namespace BandClient
             }
         }
 
+        //in case, if the app is in foreground, it should get some data from background
         private async void _deviceUseBackgroundTaskRegistration_Progress(BackgroundTaskRegistration sender, BackgroundTaskProgressEventArgs args)
         {
             await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>

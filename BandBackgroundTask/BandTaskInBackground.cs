@@ -18,7 +18,7 @@ namespace BandBackgroundTask
     {
         private BackgroundTaskDeferral Deferral;
         IBandClient bandClient;
-        HeartDataBackground heartData;
+        HeartData heartData;
         IBackgroundTaskInstance taskInstance;
         private bool IsMaxNotified=false;
         private bool IsMinNotified = false;
@@ -32,7 +32,7 @@ namespace BandBackgroundTask
         {
             this.taskInstance = taskInstance;
             Deferral = taskInstance.GetDeferral();
-            heartData = new HeartDataBackground();
+            heartData = new HeartData();
             MinRate = heartData.MinRate;
             MaxRate = heartData.MaxRate;
             taskInstance.Canceled += OnCanceled;
